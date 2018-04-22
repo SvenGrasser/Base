@@ -17,5 +17,15 @@ public class Log {
 		String logMessage = String.format("%s=%s %s=%s", "application", "tippspiel", "message", message);
 		logger.info(logMessage);
 	}
+	
+	public void warn(String message) {
+		String logMessage = String.format("%s=%s %s=%s", "application", "tippspiel", "message", message);
+		logger.warn(logMessage);
+	}
+	
+	public void error(String message) {
+		String logMessage = String.format("%s=%s %s=%s", "application", "tippspiel", "message", message);
+		logger.error(logMessage);
+	}
 }
 
