@@ -1,6 +1,5 @@
 #!groovy
 
-deleteDir()
 pipeline {
     agent any  
     stages {
