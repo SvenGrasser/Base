@@ -5,18 +5,18 @@ pipeline {
         stage('Build') {
             steps {
 		withMaven()  {
-		    sh 'mvn install -f logging/pom.xml'
+		    sh 'mvn compile -f logging/pom.xml'
 		}
 	    }
 	}
         stage('Test') {
             steps {
-                echo 'Testing..'
+		sh 'mvn test -f logging/pom.xml'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh 'mvn deploy -f logging/pom.xml'
             }
         }
     }
