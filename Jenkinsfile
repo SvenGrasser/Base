@@ -1,6 +1,7 @@
 #!groovy
 pipeline {
     agent any    
+    deleteDir()
     stages {
         stage('Build') {
             steps {
@@ -10,14 +11,14 @@ pipeline {
 	    }
 	}
         stage('Test') {
-            steps {
-		sh 'mvn test -f logging/pom.xml'
-            }
+            withMaven()  {
+		    sh 'mvn compile -f logging/pom.xml'
+		}
         }
         stage('Deploy') {
-            steps {
-                sh 'mvn deploy -f logging/pom.xml'
-            }
+            withMaven()  {
+		    sh 'mvn compile -f logging/pom.xml'
+		}
         }
     }
 }
