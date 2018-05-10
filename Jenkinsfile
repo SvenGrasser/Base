@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
 		withMaven()  {
-		    sh 'mvn test -f tippspiel/pom.xml'
+		    sh 'mvn test'
 		}
 	    }
 	}
