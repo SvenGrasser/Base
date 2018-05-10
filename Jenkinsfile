@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
 		withMaven()  {
-		    sh 'mvn test -f logging/pom.xml'
+		    sh 'mvn install -f logging/pom.xml'
 		}
 	    }
 	}
