@@ -5,6 +5,9 @@ pipeline {
     agent any  
     stages {
         stage('Build') {
+	    node {
+		deleteDir()
+	    }
             steps {		
 		withMaven()  {
 		    sh 'mvn compile -f logging/pom.xml'
