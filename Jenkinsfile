@@ -1,7 +1,7 @@
 #!groovy
 pipeline {
-    agent any      
-    stages {	
+    agent any    
+    stages {
         stage('Build') {
             steps {
 		withMaven()  {
@@ -10,14 +10,18 @@ pipeline {
 	    }
 	}
         stage('Test') {
+            steps {
 		withMaven()  {
 		    sh 'mvn test -f logging/pom.xml'
 		}
+            }
         }
         stage('Deploy') {
-		withMaven()  {
+            steps {
+                withMaven()  {
 		    sh 'mvn install -f logging/pom.xml'
 		}
+            }
         }
     }
 }
