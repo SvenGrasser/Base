@@ -1,11 +1,11 @@
 #!groovy
+
+deleteDir()
 pipeline {
-    agent any    
-    
+    agent any  
     stages {
         stage('Build') {
-            steps {
-		deleteDir()
+            steps {		
 		withMaven()  {
 		    sh 'mvn compile -f logging/pom.xml'
 		}
