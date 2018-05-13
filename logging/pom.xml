@@ -9,6 +9,7 @@
 		<url>https://github.com/SvenGrasser/Base</url>
 		<connection>scm:git:git://github.com/SvenGrasser/Base.git</connection>
 		<developerConnection>scm:git:git@github.com:SvenGrasser/Base.git</developerConnection>
+		<tag>HEAD</tag>
 	</scm>
 
 	<dependencies>
