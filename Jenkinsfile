@@ -34,7 +34,7 @@ pipeline {
                         ])
                     }
                     if(userInput == true) {
-                        sh 'mvn release:prepare -Dresume=false -f tippspiel/pom.xml'			      
+                        sh 'mvn release:prepare -Dresume=false -f logging/pom.xml'			      
                     }	
                 }
             }		
