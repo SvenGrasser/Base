@@ -14,18 +14,15 @@ public class Log {
 	}
 	
 	public void info(String message) {
-		String logMessage = String.format("%s=%s %s=%s", "application", "tippspiel", "message", message);
-		logger.info(logMessage);
+		logger.info(message);
 	}
 	
 	public void warn(String message) {
-		String logMessage = String.format("%s=%s %s=%s", "application", "tippspiel", "message", message);
-		logger.warn(logMessage);
+		logger.warn(message);
 	}
 	
 	public void error(String message) {
-		String logMessage = String.format("%s=%s %s=%s", "application", "tippspiel", "message", message);
-		logger.error(logMessage);
+		logger.error(message);
 	}
 }
 
